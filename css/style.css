@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC&display=swap');
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    /* outline: 1px red solid; */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif, Arial, Helvetica;
+    background: #1c2f54;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #1c2f54), color-stop(100%, #00001c));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, #1c2f54 0%, #081f48 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1c2f54', endColorstr='#081f48', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    padding: 0;
+    text-align: center;
+    font-family: 'open sans';
+    position: relative;
+    margin: 0;
+    height: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -50;
+}
+
+canvas.flare {
+    opacity: 0.5;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.material-icons {
+    color: #fff;
+}
+
+.material-icons.md-40 {
+    font-size: 40px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.btnTop {
+    position: fixed;
+    right: 1.5%;
+    bottom: 1.5%;
+    z-index: 99;
+    border-radius: 40% 70% 40% 60% / 70% 60% 70% 50%;
+    background-color: rgb(254, 231, 93, 0.8);
+    transition: .3s;
+}
+
+.btnTop:hover {
+    transform: translateY(-5px);
+    background-color: rgb(236, 155, 126, 0.9);
+}
+
+@media (max-width:415px) {
+    .wrap {
+        padding: 0 8px;
+    }
+}
+
+
+/* common spacing */
+
+.personalInformation,
+.gallery,
+.introduceMyself {
+    padding-bottom: 240px 0;
+}
+
+.education,
+.workExperience,
+.skill,
+.webDesign,
+.paintingWork,
+.gameWorkByUnity,
+.modelingWorkBy3dsMax,
+.autobiography,
+.license,
+.studyExperience,
+.sitelinks {
+    padding: 64px 0;
+}
+
+
+/* .index-story,
+.index-contact,
+.menu-main,
+.cart-main,
+.login-main,
+.register-main {
+    padding-bottom: 240px;
+} */
+
+
+/* .title {
+    margin-bottom: 32px;
+} */
+
+
+/* common font */
+
+h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+h5 {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+h6 {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.price-num {
+    font-weight: bold;
+}
+
+@media (max-width:415px) {
+    h5 {
+        font-size: 20px;
+    }
+}
+
+
+/* common title*/
+
+.title {
+    display: flex;
+    margin-bottom: 32px;
+    padding: 16px 0;
+    font-family: 'Noto Serif TC', serif;
+    filter: drop-shadow( 0 3px 6px #0019FF);
+}
+
+.stars {
+    margin: 0 8px;
+}
+
+
+/* header & banner */
+
+.header {
+    height: 100vh;
+}
+
+.logo {
+    overflow: hidden;
+    width: 70.16px;
+    height: 65px;
+    background: url("../img/logo.svg") no-repeat;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 72px;
+    padding: 16px 32px;
+    background-color: #001226;
+}
+
+.nav-menuList {
+    display: flex;
+}
+
+.nav-menuList a {
+    padding: 16px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.nav-menuList a:hover {
+    color: #8EB7FC;
+}
+
+.logo-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 476px;
+}
+
+
+/* main */
+
+.personalInformation .title {
+    border-bottom: #8EB7FC 2px solid;
+}
+
+.education {
+    display: flex;
+    justify-content: center;
+}
+
+.name {
+    margin-bottom: 32px;
+}
+
+.workExperience-list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill-list {
+    text-align: left;
+}
+
+.skill-list>li {
+    margin-bottom: 16px;
+}
+
+.skill-list>li:last-child {
+    margin-bottom: 0;
+}
+
+.skill-list>li>h5 {
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.gallery {
+    position: relative;
+    padding: 32px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 6px #FFF;
+}
+
+.gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.11;
+}
+
+.gallery-titleDecoration {
+    justify-content: center;
+    position: relative;
+    margin-bottom: 64px;
+    border-bottom: #8EB7FC 2px solid;
+}
+
+.gallery-titleDecoration::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background: url("../img/img-bg-title.png") center no-repeat;
+}
+
+.gallery-titleDecoration::after {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    width: 222px;
+    height: 21px;
+    background: url("../img/img-gallery-titleDecoration.svg") no-repeat;
+    filter: drop-shadow( 0 3px 6px #0019FF70);
+}
+
+.paintingWork-content,
+.gameWorkByUnity-content,
+.modelingWorkBy3dsMax-content {
+    padding: 32px;
+    background: url("../img/img-bg-gallery-item.png");
+    box-shadow: 0 0 6px #0B2149;
+}
+
+.paintingWork-content-p,
+.natsuMatsuri-p,
+.windFantasy-p,
+.modelingWorkBy3dsMax-p {
+    margin-top: 32px;
+    color: #0B2149;
+}
+
+.webDesign-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.paintingWork-swiper-item {
+    padding: 16px;
+}
+
+
+/* footer */
+
+.footer {
+    padding: 64px 0;
+    background-color: #001226;
+}
+
+.footerLogo {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.copyRight {
+    color: #fff;
+}
+
+
+/* animated */
+
+
+/* .animated-t,
+.animated-r,
+.animated-b,
+.animated-l,
+.animated-m {
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.animated-t {
+    transform: translateY(50px);
+}
+
+.animated-r {
+    transform: translateX(50px);
+}
+
+.animated-b {
+    transform: translateY(-50px);
+}
+
+.animated-l {
+    transform: translateX(-50px);
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+} */
