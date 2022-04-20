@@ -26,19 +26,36 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/lightbox.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery.let_it_snow.js"></script> -->
+    <script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/jquery-canvas-sparkles.js"></script>
     <script src="js/all.js"></script>
 </head>
 
 <body>
-    <!-- <dynamic background> -->
-    <!-- <canvas width="100%" height="100%" class="flare"></canvas>
-    <canvas width="100%" height="100%" class="snow"></canvas>
-    <canvas width="100%" height="100%" class="flake"></canvas> -->
-    <!-- </dynamic background> -->
-
+    <div class="dynamicBackground-container">
+        <div id="chips">
+            <div class="bgItem-chip1" data-depth="0.1"></div>
+            <div class="bgItem-chip2" data-depth="0.2"></div>
+            <div class="bgItem-chip3" data-depth="0.3"></div>
+            <div class="bgItem-chip4" data-depth="0.1"></div>
+            <div class="bgItem-chip5" data-depth="0.2"></div>
+            <div class="bgItem-chip6" data-depth="0.3"></div>
+            <div class="bgItem-chip7" data-depth="0.1"></div>
+            <div class="bgItem-chip8" data-depth="0.2"></div>
+            <div class="bgItem-chip9" data-depth="0.3"></div>
+            <div class="bgItem-chip10" data-depth="0.1"></div>
+            <div class="bgItem-chip11" data-depth="0.2"></div>
+            <div class="bgItem-chip12" data-depth="0.3"></div>
+            <div class="bgItem-chip13" data-depth="0.1"></div>
+            <div class="bgItem-chip14" data-depth="0.2"></div>
+            <div class="bgItem-chip15" data-depth="0.3"></div>
+        </div>
+        <div class="bgItem-nebula"></div>
+        <canvas class="snow dynamicBg" width="100%" height="100%"></canvas></div>
+    </div>
     <header class="header">
-        <nav class="navBar">
+        <!-- <nav class="navBar">
             <h1>
                 <a class="logo" href="#">個人作品集 by 黃暄晴</a>
             </h1>
@@ -47,7 +64,7 @@
                 <li><a href="#">作品展示</a></li>
                 <li><a href="#">自我介紹</a></li>
             </ul>
-        </nav>
+        </nav> -->
         <img class="logo-main" src="img/logo.svg" alt="logo-main">
     </header>
 
@@ -58,7 +75,10 @@
                     <div class="education wrap">
                         <img class="animated-l" src="img/頭貼.png" alt="頭像">
                         <div class="education-words">
-                            <h2 class="name animated-r">黃暄晴 Sally</h2>
+                            <div class="name animated-r">
+                                <h2>黃暄晴</h2>
+                                <h5>Sally Huang</h5>
+                            </div>
                             <h3 class="title animated-r">
                                 <span class="stars material-icons md-40">auto_awesome</span> 學歷
                             </h3>
@@ -121,13 +141,13 @@
                     </h3>
                     <ul class="webDesign-list animated-m">
                         <li class="animated-l">
-                            <a href="#"><img src="img/img-webDesign-list-btn01.png" alt="檸夏果汁"></a>
+                            <a class="anim-sparkle" href="#"><img src="img/img-webDesign-list-btn01.png" alt="檸夏果汁"></a>
                         </li>
                         <li class="animated-b">
-                            <a href="#"><img src="img/img-webDesign-list-btn02.png" alt="敖翔飯店"></a>
+                            <a class="anim-sparkle" href="#"><img src="img/img-webDesign-list-btn02.png" alt="敖翔飯店"></a>
                         </li>
                         <li class="animated-r">
-                            <a href="#"><img src="img/img-webDesign-list-btn03.png" alt="魔娜售票設計稿"></a>
+                            <a class="anim-sparkle" href="#"><img src="img/img-webDesign-list-btn03.png" alt="魔娜售票設計稿"></a>
                         </li>
                     </ul>
                 </li>
@@ -139,19 +159,19 @@
                     <div class="paintingWork-content animated-t">
                         <div class="swiper paintingWork-swiper">
                             <div class="swiper-wrapper">
-                                <a class="swiper-slide paintingWork-swiper-item" href="https://picsum.photos/1920/1080?random=1" data-lightbox="course-set" data-title="Html 5 基礎教學">
+                                <a class="swiper-slide paintingWork-swiper-item anim-sparkle" href="https://picsum.photos/1920/1080?random=1" data-lightbox="course-set" data-title="Html 5 基礎教學">
                                     <img src="https://picsum.photos/1920/1080?random=1" alt="item01">
                                 </a>
-                                <a class="swiper-slide paintingWork-swiper-item" href="https://picsum.photos/1920/1080?random=2" data-lightbox="course-set" data-title="Html 5 基礎教學">
+                                <a class="swiper-slide paintingWork-swiper-item anim-sparkle" href="https://picsum.photos/1920/1080?random=2" data-lightbox="course-set" data-title="Html 5 基礎教學">
                                     <img src="https://picsum.photos/1920/1080?random=2" alt="item02">
                                 </a>
-                                <a class="swiper-slide paintingWork-swiper-item" href="https://picsum.photos/1920/1080?random=3" data-lightbox="course-set" data-title="Html 5 基礎教學">
+                                <a class="swiper-slide paintingWork-swiper-item anim-sparkle" href="https://picsum.photos/1920/1080?random=3" data-lightbox="course-set" data-title="Html 5 基礎教學">
                                     <img src="https://picsum.photos/1920/1080?random=3" alt="item03">
                                 </a>
-                                <a class="swiper-slide paintingWork-swiper-item" href="https://picsum.photos/1920/1080?random=4" data-lightbox="course-set" data-title="Html 5 基礎教學">
+                                <a class="swiper-slide paintingWork-swiper-item anim-sparkle" href="https://picsum.photos/1920/1080?random=4" data-lightbox="course-set" data-title="Html 5 基礎教學">
                                     <img src="https://picsum.photos/1920/1080?random=4" alt="item04">
                                 </a>
-                                <a class="swiper-slide paintingWork-swiper-item" href="https://picsum.photos/1920/1080?random=5" data-lightbox="course-set" data-title="Html 5 基礎教學">
+                                <a class="swiper-slide paintingWork-swiper-item anim-sparkle" href="https://picsum.photos/1920/1080?random=5" data-lightbox="course-set" data-title="Html 5 基礎教學">
                                     <img src="https://picsum.photos/1920/1080?random=5" alt="item05">
                                 </a>
                             </div>
@@ -276,10 +296,10 @@
                     <div class="introduceMyself-item-contentBg">
                         <ul class="siteLink-list animated-t">
                             <li class="animated-l">
-                                <a href="#"><img src="img/img-btn-github.png" alt="GitHub連結"></a>
+                                <a class="anim-sparkle" href="#"><img src="img/img-btn-github.png" alt="GitHub連結"></a>
                             </li>
                             <li class="animated-r">
-                                <a href="#"><img src="img/img-btn-score.png" alt="在校成績"></a>
+                                <a class="anim-sparkle" href="#"><img src="img/img-btn-score.png" alt="在校成績"></a>
                             </li>
                         </ul>
                         <div class="introduceMyself-frameDecoration"></div>

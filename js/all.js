@@ -1,29 +1,23 @@
 $(document).ready(function() {
-    // //閃光
-    // $("canvas.flare").let_it_snow({
-    //     windPower: 0,
-    //     speed: 0,
-    //     color: "#392F52",
-    //     size: 120,
-    //     opacity: 0.00000001,
-    //     count: 40,
-    //     interaction: false,
-    // });
-    // //雪花
-    // $("canvas.snow").let_it_snow({
-    //     windPower: 1,
-    //     speed: 1,
-    //     count: 250,
-    //     size: 0
-    // });
-    // //小碎片
-    // $("canvas.flake").let_it_snow({
-    //     windPower: -2,
-    //     speed: 1,
-    //     count: 20,
-    //     size: 10,
-    //     image: "img/img-chip4.png"
-    // });
+    $(".snow").let_it_snow({
+        windPower: 0.01,
+        speed: 0.001,
+        count: 20,
+        size: 3,
+        image: "img/img-bgItem-snow.png"
+    });
+
+    parallaxInstance = new Parallax(document.getElementById("chips"));
+
+    $(".anim-sparkle").sparkle({
+        color: "#FFFFFF",
+        count: 30,
+        overlap: 0,
+        speed: 1,
+        minSize: 4,
+        maxSize: 10,
+        direction: "both"
+    });
 
     // $('.nav-btnMenu').click(function(event) {
     //     event.preventDefault();
@@ -98,4 +92,6 @@ $(document).ready(function() {
         // $('.img-bg-bubble2').css('transform', 'translateY(' + -scrollPos / 5 + 'px)');
         // $('.img-bg-orange, .img-bg-orange2, .img-bg-orange3, .img-bg-orange4, .img-bg-orange5, .img-bg-orange6, .img-bg-orange7').css('transform', 'translateY(' + -scrollPos / 16 + 'px)');
     });
+
+
 });

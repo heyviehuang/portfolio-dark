@@ -13,45 +13,11 @@ html {
 body {
     font-family: 'Noto Sans TC', sans-serif, Arial, Helvetica;
     background: #1c2f54;
-    /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #1c2f54), color-stop(100%, #00001c));
-    /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
-    /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
-    /* IE10+ */
-    background: radial-gradient(ellipse at center, #1c2f54 0%, #081f48 100%);
-    /* W3C */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1c2f54', endColorstr='#081f48', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
-    padding: 0;
     text-align: center;
-    font-family: 'open sans';
-    position: relative;
-    margin: 0;
-    height: 100%;
-    padding-bottom: 50px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    z-index: -50;
-}
-
-canvas.flare {
-    opacity: 0.5;
+    background: -moz-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    background: -o-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
 }
 
 .wrap {
@@ -123,7 +89,7 @@ a {
 .autobiography,
 .license,
 .studyExperience,
-.sitelinks {
+.siteLink {
     padding: 64px 0;
 }
 
@@ -142,7 +108,7 @@ a {
 
 h2 {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -262,17 +228,17 @@ p {
 }
 
 .personalInformation-item1-bg {
-    background: linear-gradient(0deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
-    background: -webkit-linear-gradient(0deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
-    background: -moz-linear-gradient(0deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
-    background: -o-linear-gradient(0deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
+    background: linear-gradient(0deg, rgb(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+    background: -webkit-linear-gradient(0deg, rgb(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+    background: -moz-linear-gradient(0deg, rgb(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+    background: -o-linear-gradient(0deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
 }
 
 .personalInformation-item2-bg {
-    background: linear-gradient(180deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
-    background: -webkit-linear-gradient(180deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
-    background: -moz-linear-gradient(180deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
-    background: -o-linear-gradient(180deg, #FFFFFF00 0%, #2D4E7A80 50%, #061D49 100%);
+    background: linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+    background: -moz-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+    background: -o-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
 }
 
 .education {
@@ -288,7 +254,13 @@ p {
 }
 
 .name {
+    display: flex;
+    align-items: baseline;
     margin-bottom: 32px;
+}
+
+.name>h2 {
+    margin-right: 16px;
 }
 
 .workExperience-list {
@@ -421,10 +393,10 @@ p {
 }
 
 .introduceMyself {
-    background: linear-gradient(#0F1234 0%, #061631 34%, #061631 66%, #5E607700 100%);
-    background: -webkit-linear-gradient(#0F1234 0%, #061631 34%, #061631 66%, #5E607700 100%);
-    background: -moz-linear-gradient(#0F1234 0%, #061631 34%, #061631 66%, #5E607700 100%);
-    background: -o-linear-gradient(#0F1234 0%, #061631 34%, #061631 66%, #5E607700 100%);
+    background: linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
+    background: -webkit-linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
+    background: -moz-linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
+    background: -o-linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
 }
 
 .introduceMyself-titleDecoration {
@@ -603,4 +575,193 @@ p {
     opacity: 1;
     transform: translateX(0);
     transform: translateY(0);
+}
+
+
+/* dynamic background */
+
+.dynamicBackground-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -50;
+}
+
+.dynamicBg {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -50;
+}
+
+#chips {
+    width: 100%;
+    height: 100%;
+}
+
+.bgItem-chip1 {
+    top: 30%;
+    left: 4%;
+    width: 46px;
+    height: 41px;
+    background: url("../img/img-chip1.png") no-repeat;
+}
+
+.bgItem-chip2 {
+    top: 20%;
+    right: 3%;
+    width: 34px;
+    height: 43px;
+    background: url("../img/img-chip2.png") no-repeat;
+}
+
+.bgItem-chip3 {
+    top: 60%;
+    left: 24%;
+    width: 24px;
+    height: 31px;
+    background: url("../img/img-chip3.png") no-repeat;
+}
+
+.bgItem-chip4 {
+    top: 88%;
+    right: 8%;
+    width: 52px;
+    height: 76px;
+    background: url("../img/img-chip4.png") no-repeat;
+}
+
+.bgItem-chip5 {
+    top: 20%;
+    left: 24%;
+    width: 50px;
+    height: 59px;
+    background: url("../img/img-chip5.png") no-repeat;
+}
+
+.bgItem-chip6 {
+    top: 72%;
+    right: 32%;
+    width: 63px;
+    height: 40px;
+    background: url("../img/img-chip6.png") no-repeat;
+}
+
+.bgItem-chip7 {
+    top: 8%;
+    left: 16%;
+    width: 18px;
+    height: 17px;
+    background: url("../img/img-chip7.png") no-repeat;
+}
+
+.bgItem-chip8 {
+    top: 40%;
+    right: 32%;
+    width: 10px;
+    height: 16px;
+    background: url("../img/img-chip8.png") no-repeat;
+}
+
+.bgItem-chip9 {
+    top: 16%;
+    left: 29%;
+    width: 28px;
+    height: 21px;
+    background: url("../img/img-chip9.png") no-repeat;
+}
+
+.bgItem-chip10 {
+    top: 30%;
+    right: 24%;
+    width: 90px;
+    height: 95px;
+    background: url("../img/img-chip10.png") no-repeat;
+}
+
+.bgItem-chip11 {
+    top: 50%;
+    left: 2%;
+    width: 32px;
+    height: 31px;
+    background: url("../img/img-chip11.png") no-repeat;
+}
+
+.bgItem-chip12 {
+    top: 48%;
+    right: 10%;
+    width: 92px;
+    height: 83px;
+    background: url("../img/img-chip12.png") no-repeat;
+}
+
+.bgItem-chip13 {
+    top: 72%;
+    left: 8%;
+    width: 112px;
+    height: 87px;
+    background: url("../img/img-chip13.png") no-repeat;
+}
+
+.bgItem-chip14 {
+    top: 88%;
+    right: 16%;
+    width: 63px;
+    height: 39px;
+    background: url("../img/img-chip14.png") no-repeat;
+}
+
+.bgItem-chip15 {
+    top: 82%;
+    left: 12%;
+    width: 88px;
+    height: 87px;
+    background: url("../img/img-chip15.png") no-repeat;
+}
+
+.bgItem-nebula,
+.bgItem-nebula::before,
+.bgItem-nebula::after {
+    content: "";
+    position: absolute;
+    z-index: -51;
+    width: 245px;
+    height: 291px;
+    background: url("../img/img-bgItem-nebula.png") no-repeat;
+    animation-name: nebulaAnim;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition: 1s;
+}
+
+@keyframes nebulaAnim {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.bgItem-nebula {
+    top: 40%;
+    right: 40%;
+    transform: scale(1.2);
+}
+
+.bgItem-nebula::before {
+    top: 10%;
+    left: -200%;
+    transform: scale(1.5);
+}
+
+.bgItem-nebula::after {
+    top: -120%;
+    right: -220%;
+    transform: scale(2);
 }
