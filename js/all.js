@@ -7,7 +7,9 @@ $(document).ready(function() {
         image: "img/img-bgItem-snow.png"
     });
 
-    parallaxInstance = new Parallax(document.getElementById("chips"));
+    // parallaxInstance = new Parallax(document.getElementById("chips"));
+    var scene = document.getElementById('chips');
+    var parallaxInstance = new Parallax(scene);
 
     $(".anim-sparkle").sparkle({
         color: "#FFFFFF",
