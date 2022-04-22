@@ -54,7 +54,7 @@ a {
     position: fixed;
     right: 1.5%;
     bottom: 1.5%;
-    z-index: 99;
+    z-index: 9;
     border-radius: 40% 70% 40% 60% / 70% 60% 70% 50%;
     background-color: rgb(254, 231, 93, 0.8);
     transition: .3s;
@@ -115,12 +115,12 @@ a {
 .license,
 .studyExperience,
 .siteLink {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .introduceMyself {
-    padding-top: 240px;
+    padding-top: 64px;
 }
 
 .personalInformation,
@@ -229,14 +229,14 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10;
     width: 100%;
     height: 72px;
     padding: 16px 32px;
-    background-color: #001226;
+    background-color: rgba(0, 18, 38, 0.5);
 }
 
 .nav-menuList {
@@ -253,6 +253,11 @@ p {
 
 .nav-menuList a:hover {
     color: #8EB7FC;
+}
+
+.active {
+    color: #8EB7FC;
+    box-shadow: 0 2px 0 #0019FF;
 }
 
 .logo-main {
@@ -386,7 +391,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -407,7 +412,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
     width: 100%;
     height: 100%;
     background: url("../img/img-bg-title.png") center no-repeat;
@@ -594,10 +599,12 @@ p {
     right: -3.5px;
 }
 
-.license-list,
-.studyExperience-content {
+.license-list>li,
+.studyExperience-list-2016>li,
+.studyExperience-list-2017>li {
     color: #FFF;
     line-height: 2;
+    padding-bottom: 16px;
 }
 
 .studyExperience-content>li:first-child {
@@ -691,7 +698,7 @@ p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -50;
+    z-index: -10;
 }
 
 .dynamicBg {
@@ -699,7 +706,7 @@ p {
     top: 0;
     left: 0;
     position: fixed;
-    z-index: -50;
+    z-index: -10;
 }
 
 #chips {
@@ -707,124 +714,79 @@ p {
     height: 100%;
 }
 
-.bgItem-chip1 {
+.bgItem-chip1-container {
     top: 30%;
     left: 4%;
-    width: 46px;
-    height: 41px;
-    background: url("../img/img-chip1.png") no-repeat;
 }
 
-.bgItem-chip2 {
+.bgItem-chip2-container {
     top: 20%;
     right: 3%;
-    width: 34px;
-    height: 43px;
-    background: url("../img/img-chip2.png") no-repeat;
 }
 
-.bgItem-chip3 {
+.bgItem-chip3-container {
     top: 60%;
     left: 24%;
-    width: 24px;
-    height: 31px;
-    background: url("../img/img-chip3.png") no-repeat;
 }
 
-.bgItem-chip4 {
+.bgItem-chip4-container {
     top: 88%;
     right: 8%;
-    width: 52px;
-    height: 76px;
-    background: url("../img/img-chip4.png") no-repeat;
 }
 
-.bgItem-chip5 {
+.bgItem-chip5-container {
     top: 20%;
     left: 24%;
-    width: 50px;
-    height: 59px;
-    background: url("../img/img-chip5.png") no-repeat;
 }
 
-.bgItem-chip6 {
+.bgItem-chip6-container {
     top: 72%;
     right: 32%;
-    width: 63px;
-    height: 40px;
-    background: url("../img/img-chip6.png") no-repeat;
 }
 
-.bgItem-chip7 {
+.bgItem-chip7-container {
     top: 8%;
     left: 16%;
-    width: 18px;
-    height: 17px;
-    background: url("../img/img-chip7.png") no-repeat;
 }
 
-.bgItem-chip8 {
+.bgItem-chip8-container {
     top: 40%;
     right: 32%;
-    width: 10px;
-    height: 16px;
-    background: url("../img/img-chip8.png") no-repeat;
 }
 
-.bgItem-chip9 {
+.bgItem-chip9-container {
     top: 16%;
     left: 29%;
-    width: 28px;
-    height: 21px;
-    background: url("../img/img-chip9.png") no-repeat;
 }
 
-.bgItem-chip10 {
+.bgItem-chip10-container {
     top: 8%;
     right: 24%;
-    width: 90px;
-    height: 95px;
-    background: url("../img/img-chip10.png") no-repeat;
 }
 
-.bgItem-chip11 {
+.bgItem-chip11-container {
     top: 50%;
     left: 2%;
-    width: 32px;
-    height: 31px;
-    background: url("../img/img-chip11.png") no-repeat;
 }
 
-.bgItem-chip12 {
+.bgItem-chip12-container {
     top: 48%;
     right: 10%;
-    width: 92px;
-    height: 83px;
-    background: url("../img/img-chip12.png") no-repeat;
 }
 
-.bgItem-chip13 {
+.bgItem-chip13-container {
     top: 72%;
     left: 8%;
-    width: 112px;
-    height: 87px;
-    background: url("../img/img-chip13.png") no-repeat;
 }
 
-.bgItem-chip14 {
+.bgItem-chip14-container {
     top: 88%;
     right: 16%;
-    width: 63px;
-    height: 39px;
-    background: url("../img/img-chip14.png") no-repeat;
 }
 
-.bgItem-chip15 {
+.bgItem-chip15-container {
     top: 82%;
     left: 12%;
-    width: 88px;
-    height: 87px;
-    background: url("../img/img-chip15.png") no-repeat;
 }
 
 .bgItem-nebula,
@@ -832,7 +794,7 @@ p {
 .bgItem-nebula::after {
     content: "";
     position: absolute;
-    z-index: -51;
+    z-index: -9;
     width: 245px;
     height: 291px;
     background: url("../img/img-bgItem-nebula.png") no-repeat;
@@ -870,4 +832,22 @@ p {
     top: -120%;
     right: -220%;
     transform: scale(2);
+}
+
+@media (max-width:1000px) {
+    .chip {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width:768px) {
+    .chip {
+        transform: scale(0.5);
+    }
+}
+
+@media (max-width:415px) {
+    .chip {
+        transform: scale(0.3);
+    }
 }

@@ -36,41 +36,41 @@
 <body>
     <div class="dynamicBackground-container">
         <div id="chips">
-            <div class="bgItem-chip1" data-depth="0.1"></div>
-            <div class="bgItem-chip2" data-depth="0.2"></div>
-            <div class="bgItem-chip3" data-depth="0.3"></div>
-            <div class="bgItem-chip4" data-depth="0.1"></div>
-            <div class="bgItem-chip5" data-depth="0.2"></div>
-            <div class="bgItem-chip6" data-depth="0.3"></div>
-            <div class="bgItem-chip7" data-depth="0.1"></div>
-            <div class="bgItem-chip8" data-depth="0.2"></div>
-            <div class="bgItem-chip9" data-depth="0.3"></div>
-            <div class="bgItem-chip10" data-depth="0.1"></div>
-            <div class="bgItem-chip11" data-depth="0.2"></div>
-            <div class="bgItem-chip12" data-depth="0.3"></div>
-            <div class="bgItem-chip13" data-depth="0.1"></div>
-            <div class="bgItem-chip14" data-depth="0.2"></div>
-            <div class="bgItem-chip15" data-depth="0.3"></div>
+            <div class="bgItem-chip1-container" data-depth="0.1"><img class="chip" src="img/img-chip1.png" alt="chip1"></div>
+            <div class="bgItem-chip2-container" data-depth="0.2"><img class="chip" src="img/img-chip2.png" alt="chip2"></div>
+            <div class="bgItem-chip3-container" data-depth="0.3"><img class="chip" src="img/img-chip3.png" alt="chip3"></div>
+            <div class="bgItem-chip4-container" data-depth="0.1"><img class="chip" src="img/img-chip4.png" alt="chip4"></div>
+            <div class="bgItem-chip5-container" data-depth="0.2"><img class="chip" src="img/img-chip5.png" alt="chip5"></div>
+            <div class="bgItem-chip6-container" data-depth="0.3"><img class="chip" src="img/img-chip6.png" alt="chip6"></div>
+            <div class="bgItem-chip7-container" data-depth="0.1"><img class="chip" src="img/img-chip7.png" alt="chip7"></div>
+            <div class="bgItem-chip8-container" data-depth="0.2"><img class="chip" src="img/img-chip8.png" alt="chip8"></div>
+            <div class="bgItem-chip9-container" data-depth="0.3"><img class="chip" src="img/img-chip9.png" alt="chip9"></div>
+            <div class="bgItem-chip10-container" data-depth="0.1"><img class="chip" src="img/img-chip10.png" alt="chip10"></div>
+            <div class="bgItem-chip11-container" data-depth="0.2"><img class="chip" src="img/img-chip11.png" alt="chip11"></div>
+            <div class="bgItem-chip12-container" data-depth="0.3"><img class="chip" src="img/img-chip12.png" alt="chip12"></div>
+            <div class="bgItem-chip13-container" data-depth="0.1"><img class="chip" src="img/img-chip13.png" alt="chip13"></div>
+            <div class="bgItem-chip14-container" data-depth="0.2"><img class="chip" src="img/img-chip14.png" alt="chip14"></div>
+            <div class="bgItem-chip15-container" data-depth="0.3"><img class="chip" src="img/img-chip15.png" alt="chip15"></div>
         </div>
         <div class="bgItem-nebula"></div>
         <canvas class="snow dynamicBg" width="100%" height="100%"></canvas></div>
     </div>
     <header class="header">
-        <!-- <nav class="navBar">
+        <nav class="navBar">
             <h1>
-                <a class="logo" href="#">個人作品集 by 黃暄晴</a>
+                <a class="logo scrollTop" href="body">個人作品集 by 黃暄晴</a>
             </h1>
             <ul class="nav-menuList">
-                <li><a href="#">基本資料</a></li>
-                <li><a href="#">作品展示</a></li>
-                <li><a href="#">自我介紹</a></li>
+                <li><a class="scrollTop" href="#personalInformation">基本資料</a></li>
+                <li><a class="scrollTop" href="#gallery">作品展示</a></li>
+                <li><a class="scrollTop" href="#introduceMyself">自我介紹</a></li>
             </ul>
-        </nav> -->
+        </nav>
         <img class="logo-main" src="img/logo.svg" alt="logo-main">
     </header>
 
     <main>
-        <section class="personalInformation">
+        <section id="personalInformation" class="personalInformation">
             <ul>
                 <li class="personalInformation-item1-bg">
                     <div class="education wrap">
@@ -137,7 +137,7 @@
             </ul>
         </section>
         <div class="wrap">
-            <section class="gallery">
+            <section id="gallery" class="gallery">
                 <ul>
                     <li class="webDesign">
                         <h3 class="title gallery-titleDecoration animated-b">
@@ -254,7 +254,7 @@
             </section>
         </div>
 
-        <section class="introduceMyself">
+        <section id="introduceMyself" class="introduceMyself">
             <ul class="wrap">
                 <li class="autobiography">
                     <h3 class="title introduceMyself-titleDecoration animated-b">
