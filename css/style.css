@@ -24,6 +24,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 32px;
+    overflow: hidden;
 }
 
 img {
@@ -64,9 +65,18 @@ a {
     background-color: rgb(236, 155, 126, 0.9);
 }
 
-@media (max-width:415px) {
+@media (max-width:768px) {
     .wrap {
         padding: 0 8px;
+    }
+    .material-icons.md-40 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:415px) {
+    .material-icons.md-40 {
+        font-size: 24px;
     }
 }
 
@@ -94,12 +104,6 @@ a {
 
 /* common spacing */
 
-.personalInformation,
-.gallery,
-.introduceMyself {
-    padding-bottom: 240px 0;
-}
-
 .education,
 .workExperience,
 .skill,
@@ -111,7 +115,8 @@ a {
 .license,
 .studyExperience,
 .siteLink {
-    padding: 64px 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .introduceMyself {
@@ -166,9 +171,25 @@ p {
     font-weight: bold;
 }
 
+@media (max-width:768px) {
+    h3 {
+        font-size: 32px;
+    }
+}
+
 @media (max-width:415px) {
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
     h5 {
         font-size: 20px;
+    }
+    h6 {
+        font-size: 16px;
     }
 }
 
@@ -183,7 +204,8 @@ p {
     filter: drop-shadow( 0 3px 6px #0019FF);
 }
 
-.stars {
+.stars,
+.starsSwitch {
     margin: 0 8px;
 }
 
@@ -262,6 +284,10 @@ p {
     background: -o-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
 }
 
+.personalInformation .starsSwitch {
+    display: none;
+}
+
 .education {
     display: flex;
     justify-content: space-between;
@@ -280,7 +306,7 @@ p {
     margin-bottom: 32px;
 }
 
-.name>h2 {
+.name>li:first-child {
     margin-right: 16px;
 }
 
@@ -311,6 +337,41 @@ p {
 .skill-list>li>h5 {
     margin-bottom: 8px;
     font-weight: 700;
+}
+
+@media (max-width:768px) {
+    .headShot {
+        width: 50%;
+        margin: 0 auto 8px;
+    }
+    .personalInformation .title {
+        justify-content: center;
+    }
+    .personalInformation .starsSwitch {
+        display: block;
+    }
+    .education,
+    .workExperience-list,
+    .skill-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+    }
+    .name>li:first-child {
+        margin-right: 0;
+    }
+    .name {
+        display: block;
+    }
+    .education-words {
+        margin-left: 0px;
+        text-align: center;
+    }
+    .workExperience-arrow {
+        margin: 40px auto;
+        transform: rotateZ(-90deg);
+    }
 }
 
 .gallery {
@@ -362,6 +423,7 @@ p {
     filter: drop-shadow( 0 3px 6px #0019FF70);
 }
 
+.webDesign-content,
 .paintingWork-content,
 .gameWorkByUnity-content,
 .modelingWorkBy3dsMax-content {
@@ -373,8 +435,8 @@ p {
 .paintingWork-content-p,
 .natsuMatsuri-p,
 .windFantasy-p,
-.modelingWorkBy3dsMax-p {
-    margin-top: 32px;
+.modelingWorkBy3dsMax-content-p {
+    margin-bottom: 32px;
     color: #0B2149;
 }
 
@@ -419,7 +481,21 @@ p {
 }
 
 .gameWorkByUnity-content>li:first-child {
-    margin-bottom: 32px;
+    margin-bottom: 64px;
+}
+
+@media (max-width:768px) {
+    .webDesign-content,
+    .paintingWork-content,
+    .gameWorkByUnity-content,
+    .modelingWorkBy3dsMax-content {
+        padding: 32px 8px;
+    }
+    .webDesign-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .introduceMyself {
@@ -704,7 +780,7 @@ p {
 }
 
 .bgItem-chip10 {
-    top: 30%;
+    top: 8%;
     right: 24%;
     width: 90px;
     height: 95px;
