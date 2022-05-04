@@ -501,10 +501,6 @@ p {
 
 .careerRecord-titleDecoration {
     justify-content: center;
-}
-
-.careerRecord-titleDecoration {
-    justify-content: center;
     position: relative;
     margin-bottom: 64px;
 }
@@ -639,6 +635,9 @@ p {
 }
 
 @media (max-width:768px) {
+    .gallery .title {
+        margin-bottom: 8px;
+    }
     .webDesign-content,
     .paintingWork-content,
     .gameWorkByUnity-content,
@@ -789,6 +788,12 @@ p {
 
 .siteLink-list>li:first-child {
     margin-right: 32px;
+}
+
+@media (max-width:768px) {
+    .careerRecord-titleDecoration {
+        margin-bottom: 24px;
+    }
 }
 
 
