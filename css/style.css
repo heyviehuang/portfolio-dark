@@ -20,6 +20,36 @@ body {
     background: -ms-radial-gradient(center, ellipse cover, #1c2f54 0%, #081f48 100%);
 }
 
+
+/* 捲軸底色 */
+
+body::-webkit-scrollbar-track,
+#style-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px 0a2149;
+    background-color: rgb(13, 56, 104);
+}
+
+#style-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background-color: rgba(13, 56, 104, .1);
+}
+
+
+/* 捲軸寬度 */
+
+body::-webkit-scrollbar,
+#style-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+/* 捲軸本體顏色 */
+
+body::-webkit-scrollbar-thumb,
+#style-scroll::-webkit-scrollbar-thumb {
+    background-color: #8fb8fc;
+}
+
 .wrap {
     max-width: 1200px;
     margin: 0 auto;
@@ -36,6 +66,14 @@ img {
 a {
     display: block;
     text-decoration: none;
+    transition: all .6s;
+}
+
+button {
+    display: block;
+    padding: 0;
+    border: none;
+    cursor: pointer;
 }
 
 .material-icons {
@@ -55,14 +93,22 @@ a {
     right: 1.5%;
     bottom: 1.5%;
     z-index: 9;
-    border-radius: 40% 70% 40% 60% / 70% 60% 70% 50%;
-    background-color: rgb(254, 231, 93, 0.8);
+    background-color: rgba(39, 65, 158, 0.8);
     transition: .3s;
 }
 
 .btnTop:hover {
     transform: translateY(-5px);
-    background-color: rgb(236, 155, 126, 0.9);
+    background-color: rgba(143, 185, 252, 0.8);
+}
+
+.webDesign-list-a:hover,
+.siteLink-list-a:hover,
+.swiper-slide:hover {
+    transition: .6s;
+    transform: scale(1.06);
+    filter: drop-shadow(0 1px 6px #ffffff);
+    -webkit-filter: drop-shadow(0 1px 6px #ffffff);
 }
 
 @media (max-width:768px) {
@@ -119,13 +165,13 @@ a {
     padding-bottom: 32px;
 }
 
-.introduceMyself {
+.careerRecord {
     padding-top: 64px;
 }
 
 .personalInformation,
 .gallery,
-.introduceMyself {
+.careerRecord {
     margin-bottom: 240px;
 }
 
@@ -164,7 +210,7 @@ h6 {
 p {
     color: #ffffff;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 2;
 }
 
 .price-num {
@@ -234,8 +280,7 @@ p {
     left: 0;
     z-index: 10;
     width: 100%;
-    height: 72px;
-    padding: 16px 32px;
+    padding: 0 32px;
     background-color: rgba(0, 18, 38, 0.5);
 }
 
@@ -243,21 +288,42 @@ p {
     display: flex;
 }
 
+.btn-navItem-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .nav-menuList a {
-    padding: 16px;
+    padding: 24px 32px;
     color: #ffffff;
     font-size: 20px;
     text-align: center;
     white-space: nowrap;
 }
 
-.nav-menuList a:hover {
-    color: #8EB7FC;
+.btn-navItem-a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 220%, 0);
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 220%, 0);
 }
 
-.active {
-    color: #8EB7FC;
-    box-shadow: 0 2px 0 #0019FF;
+.btn-navItem-container:hover .btn-navItem-a::before,
+.active.btn-navItem-a::before {
+    -webkit-transform: scale3d(3.3, 3.3, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -160%, 0);
+    transform: scale3d(3.3, 3.3, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -160%, 0);
+}
+
+.active.btn-navItem-a::before {
+    -webkit-transform: scale3d(3.3, 3.3, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
+    transform: scale3d(3.3, 3.3, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
 }
 
 .logo-main {
@@ -266,6 +332,25 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 476px;
+}
+
+@media (max-width:768px) {
+    .navBar {
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav-menuList {
+        width: 100%;
+    }
+    .btn-navItem-container {
+        width: 100%;
+    }
+    .btn-navItem-a {
+        padding: 24px 0;
+    }
+    .logo-main {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
 }
 
 
@@ -287,6 +372,13 @@ p {
     background: -webkit-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
     background: -moz-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
     background: -o-linear-gradient(180deg, rgba(7, 26, 63) 0%, rgba(45, 78, 122, 0.502) 50%, rgb(6, 29, 73) 100%);
+}
+
+.personalInformation-item3-bg {
+    background: linear-gradient(180deg, rgb(45, 78, 122, 0.502) 0, rgba(6, 29, 73) 30%, rgb(6, 29, 73) 70%, rgba(45, 78, 122, 0.502) 100%);
+    background: -webkit-linear-gradient(180deg, rgb(45, 78, 122, 0.502) 0, rgba(6, 29, 73) 30%, rgb(6, 29, 73) 70%, rgba(45, 78, 122, 0.502) 100%);
+    background: -moz-linear-gradient(180deg, rgb(45, 78, 122, 0.502) 0, rgba(6, 29, 73) 30%, rgb(6, 29, 73) 70%, rgba(45, 78, 122, 0.502) 100%);
+    background: -o-linear-gradient(180deg, rgb(45, 78, 122, 0.502) 0, rgba(6, 29, 73) 30%, rgb(6, 29, 73) 70%, rgba(45, 78, 122, 0.502) 100%);
 }
 
 .personalInformation .starsSwitch {
@@ -344,6 +436,18 @@ p {
     font-weight: 700;
 }
 
+.autobiography {
+    padding-bottom: 64px;
+}
+
+.autobiography .title {
+    justify-content: center;
+}
+
+.autobiography-content {
+    color: #fff;
+}
+
 @media (max-width:768px) {
     .headShot {
         width: 50%;
@@ -377,37 +481,36 @@ p {
         margin: 40px auto;
         transform: rotateZ(-90deg);
     }
+    .personalInformation-item3-bg {
+        background-color: rgb(6, 29, 73);
+    }
 }
 
 .gallery {
     position: relative;
     padding: 32px;
     border: 2px solid #FFFFFF;
+    background-color: rgb(255, 255, 255, 0.491);
     box-shadow: 0px 0px 6px #FFF;
 }
 
-.gallery::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0.11;
+.gallery .title {
+    justify-content: center;
+    margin-bottom: 0;
 }
 
-.gallery-titleDecoration,
-.introduceMyself-titleDecoration {
+.careerRecord-titleDecoration {
+    justify-content: center;
+}
+
+.careerRecord-titleDecoration {
     justify-content: center;
     position: relative;
     margin-bottom: 64px;
-    border-bottom: #8EB7FC 2px solid;
 }
 
-.gallery-titleDecoration::before,
-.introduceMyself-titleDecoration::before {
+.gallery .title::before,
+.careerRecord-titleDecoration::before {
     content: "";
     position: absolute;
     top: 0;
@@ -432,9 +535,47 @@ p {
 .paintingWork-content,
 .gameWorkByUnity-content,
 .modelingWorkBy3dsMax-content {
+    position: relative;
     padding: 32px;
     background: url("../img/img-bg-gallery-item.png");
+    background-color: #0a2149;
+    border: 2px solid #8fb8fc;
     box-shadow: 0 0 6px #0B2149;
+}
+
+.webDesign-content::before,
+.paintingWork-content::before,
+.gameWorkByUnity-content::before,
+.modelingWorkBy3dsMax-content::before,
+.webDesign-content::after,
+.paintingWork-content::after,
+.gameWorkByUnity-content::after,
+.modelingWorkBy3dsMax-content::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%);
+    width: 222px;
+    height: 21px;
+    background: url("../img/img-gallery-titleDecoration.svg") no-repeat;
+}
+
+.webDesign-content::before,
+.paintingWork-content::before,
+.gameWorkByUnity-content::before,
+.modelingWorkBy3dsMax-content::before {
+    top: 0;
+}
+
+.webDesign-content::after,
+.paintingWork-content::after,
+.gameWorkByUnity-content::after,
+.modelingWorkBy3dsMax-content::after {
+    bottom: 0;
+    transform: translateX(-50%) scaleY(-1);
+}
+
+.webDesign-list .webDesign-content-p {
+    margin-bottom: 24px;
 }
 
 .paintingWork-content-p,
@@ -442,12 +583,20 @@ p {
 .windFantasy-p,
 .modelingWorkBy3dsMax-content-p {
     margin-bottom: 32px;
-    color: #0B2149;
 }
 
 .webDesign-list {
     display: flex;
     justify-content: space-around;
+}
+
+.webDesign-list>li {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
 }
 
 .swiper {
@@ -501,30 +650,33 @@ p {
         flex-direction: column;
         align-items: center;
     }
+    .webDesign-list>li {
+        margin-bottom: 64px;
+    }
 }
 
-.introduceMyself {
+.careerRecord {
     background: linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
     background: -webkit-linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
     background: -moz-linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
     background: -o-linear-gradient(rgba(15, 18, 51, 0.8) 0%, rgba(6, 22, 49, 0.6) 34%, rgba(6, 22, 49, 0.6) 66%, rgba(94, 96, 119, 0) 100%);
 }
 
-.introduceMyself-titleDecoration {
-    border: none;
+.careerRecord-titleDecoration {
+    margin-bottom: 16px;
 }
 
-.introduceMyself-titleDecoration-line {
+.careerRecord-titleDecoration-line {
     display: flex;
     align-items: center;
-    margin: -64px 0 32px;
+    margin: -16px 0 16px;
 }
 
 .titleDecoration-lineC {
     margin: 0 16px;
     width: 37px;
     height: 17px;
-    background: url("../img/img-introduceMyself-titleDecoration.svg") no-repeat center;
+    background: url("../img/img-careerRecord-titleDecoration.svg") no-repeat center;
     background-size: contain;
 }
 
@@ -560,7 +712,7 @@ p {
     transform: translate(0, -50%) rotate(45deg);
 }
 
-.introduceMyself-item-contentBg {
+.careerRecord-item-contentBg {
     position: relative;
     margin: 3.5px;
     padding: 32px;
@@ -568,10 +720,10 @@ p {
     background-color: #FFFFFF33;
 }
 
-.introduceMyself-item-contentBg::before,
-.introduceMyself-item-contentBg::after,
-.introduceMyself-frameDecoration::before,
-.introduceMyself-frameDecoration::after {
+.careerRecord-item-contentBg::before,
+.careerRecord-item-contentBg::after,
+.careerRecord-frameDecoration::before,
+.careerRecord-frameDecoration::after {
     content: "";
     position: absolute;
     width: 7px;
@@ -579,22 +731,22 @@ p {
     background-color: #fff;
 }
 
-.introduceMyself-item-contentBg::before {
+.careerRecord-item-contentBg::before {
     top: -3.5px;
     left: -3.5px;
 }
 
-.introduceMyself-item-contentBg::after {
+.careerRecord-item-contentBg::after {
     top: -3.5px;
     right: -3.5px;
 }
 
-.introduceMyself-frameDecoration::before {
+.careerRecord-frameDecoration::before {
     bottom: -3.5px;
     left: -3.5px;
 }
 
-.introduceMyself-frameDecoration::after {
+.careerRecord-frameDecoration::after {
     bottom: -3.5px;
     right: -3.5px;
 }
@@ -698,7 +850,7 @@ p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -10;
+    z-index: -1;
 }
 
 .dynamicBg {

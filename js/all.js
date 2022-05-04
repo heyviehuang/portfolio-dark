@@ -48,27 +48,21 @@ $(document).ready(function() {
         direction: "both"
     });
 
-    // $('.nav-btnMenu').click(function(event) {
-    //     event.preventDefault();
-    //     $('.nav-menuList-mb').toggleClass('nav-menuList-mb-fadeIn');
-    //     $('#nav-btnMenu').text($(this).text() == 'close' ? 'menu' : 'close');
-    // });
+    $('.btnTop').click(function(event) {
+        event.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
 
-    // $('.btnTop').click(function(event) {
-    //     event.preventDefault();
-    //     $('html,body').animate({
-    //         scrollTop: 0
-    //     }, 700);
-    // });
-
-    // function showBtnCondition() {
-    //     if ($(this).scrollTop() > 1200) {
-    //         $('.btnTop').fadeIn();
-    //     } else {
-    //         $('.btnTop').fadeOut();
-    //     }
-    // }
-    // $(window).scroll(showBtnCondition);
+    function showBtnCondition() {
+        if ($(this).scrollTop() > 1200) {
+            $('.btnTop').fadeIn();
+        } else {
+            $('.btnTop').fadeOut();
+        }
+    }
+    $(window).scroll(showBtnCondition);
 
     var swiper = new Swiper(".paintingWork-swiper", {
         spaceBetween: 30,
@@ -97,12 +91,28 @@ $(document).ready(function() {
                 spaceBetween: 8,
                 slidesPerGroup: 1,
                 loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
             });
         } else {
             var swiper = new Swiper(".modelingWorkBy3dsMax-swiper", {
                 slidesPerView: 3,
                 spaceBetween: 16,
                 freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
             });
         }
     }
